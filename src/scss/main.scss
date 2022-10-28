@@ -2,64 +2,59 @@
 
 @import "_variables";
 @import "modules/hello.scss";
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 html {
-    box-sizing: border-box;
-  }
-  *,
-  *:before,
-  *:after {
-    box-sizing: inherit;
-  }
-
-body {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    height: 100%;
-    width: 100vw;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 .first {
-  background-image:url('/src/assets/img/crowd.jpg');
+  background-image: url("/src/assets/img/crowd.jpg");
   background-position: center center;
-  text-align:center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  height: 100%;
+  text-align: center;
+  width: 100vw;
   &__back {
-      color:$firstColor;
+    color: $firstColor;
   }
   &__button {
-      background:none;
-      border:2px solid $firstColor;
-      border-radius:6px;
-      font-size:larger;
-      font-weight: bold;
-      width:80px;
-      height:80px;
-      margin:5px;
-      padding:6px;
-      transform:scale(1);
+    background: none;
+    border: 2px solid $firstColor;
+    border-radius: 6px;
+    font-size: larger;
+    font-weight: bold;
+    width: 80px;
+    height: 80px;
+    margin: 5px;
+    padding: 6px;
+    transform: scale(1);
   }
   &__heading {
-      color:$firstColor;
+    color: $firstColor;
   }
   &__keys {
-      margin: 36px 0px;
+    margin: 36px 0px;
   }
   &__section {
-      margin:100px;
-      padding:16px;
+    margin-top:100px;
+    padding: 16px;
   }
   &__sound {
-      font-weight: 400;
-      font-size: smaller;
-      margin-top: 2px;
+    font-weight: 400;
+    font-size: smaller;
+    margin-top: 2px;
   }
   &__special {
-      border:2px solid #970D1A;
-      box-shadow: 0 0 1rem #970D1A;
-      transform:scale(1.1);
-      text-shadow: 0 0 .5rem #4E204D;
+    border: 2px solid #970d1a;
+    box-shadow: 0 0 1rem #970d1a;
+    transform: scale(1.1);
+    text-shadow: 0 0 0.5rem #4e204d;
   }
-
 }
