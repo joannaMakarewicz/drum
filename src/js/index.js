@@ -4,20 +4,34 @@ import "../scss/main.scss";
 
 console.log("HELLO. My name is Joanna. Nice to meet you on my website. Enjoy!");
 
-const keys = document.querySelectorAll("button");
+const buttons = document.querySelectorAll("button");
 const audios = document.querySelectorAll("audio");
 
-for (let element of keys) {
-  element.addEventListener("click", () => {
-    element.classList.toggle("first__special");
+function playSound(e) {
+  audios.forEach((audio) => {
+    if (e.keyCode == audio.id) {
+      audio.currentTime = 0;
+      audio.play();
+    }
+  });
+
+  buttons.forEach((button) => {
+    if (e.keyCode == button.id) {
+      button.classList.toggle("first__special");
+    }
+  });
+}
+
+window.addEventListener("keydown", playSound);
+
+for (let button of buttons) {
+  button.addEventListener("click", () => {
+    button.classList.toggle("first__special");
     for (let audio of audios) {
-      if (audio.id == element.id) {
+      if (audio.id == button.id) {
         audio.currentTime = 0;
         audio.play();
       }
     }
   });
 }
-
-
-
