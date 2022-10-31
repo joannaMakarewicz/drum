@@ -8,15 +8,15 @@ const buttons = document.querySelectorAll("button");
 const audios = document.querySelectorAll("audio");
 
 function playSound(e) {
-  audios.forEach((audio) => {
+  audios.forEach(audio => {
     if (e.keyCode == audio.id) {
       audio.currentTime = 0;
       audio.play();
     }
   });
 
-  buttons.forEach((button) => {
-    if (e.keyCode == button.id) {
+  buttons.forEach(button => {
+    if (e.keyCode == button.name) {
       button.classList.toggle("first__special");
     }
   });
@@ -28,7 +28,7 @@ for (let button of buttons) {
   button.addEventListener("click", () => {
     button.classList.toggle("first__special");
     for (let audio of audios) {
-      if (audio.id == button.id) {
+      if (audio.id == button.name) {
         audio.currentTime = 0;
         audio.play();
       }
