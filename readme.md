@@ -1,18 +1,23 @@
-![cover](https://cotenfrontend.pl/img/cover.png)
+![cover](https://joannamakarewicz.github.io/drum/drum.png)
 
-# WTF Webpack Starter Kit 
+# Let's play drum
 
-Simple toolkit for your static websites development.
+Simple tool for drum player - main sounds of drum put into buttons.
+
+# Description
+
+Project is dedicated for everyone who wants to practise some drum's sounds. 
+
+You can check this Project here: https://joannamakarewicz.github.io/drum/
 
 ## How to use it?
 
-Click on `Use this template` button to generate a new repository based on this starter kit. After that clone it to your computer, go to the project directory in console and type `npm install`.
+Click on every single button or use your keyboard for making sounds. On keyboard use keys: A, S, D, F, G, H, J, K, L.
 
-## Available scripts
 
-`npm run start` - runs development mode
+### Languages
 
-`npm run build` - runs build process for production
-
-`npm run publish` - runs build process and publish the page using `gh-pages` branch
-
+Languages used to build Project: 
+- JS 
+- HTML
+- SCSS.
