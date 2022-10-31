@@ -18,7 +18,6 @@ Click on every single button or use your keyboard for making sounds. On keyboard
 ### Languages
 
 Languages used to build Project: 
-- HTML 
-- CSS 
-- SCSS 
-- JS.
+- JS 
+- HTML
+- SCSS.
