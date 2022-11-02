@@ -7,7 +7,7 @@ console.log("HELLO. My name is Joanna. Nice to meet you on my website. Enjoy!");
 const buttons = document.querySelectorAll("button");
 const audios = document.querySelectorAll("audio");
 const history = document.querySelector(".music__history--js");
-const load = document.querySelector(".history__button--js");
+const load = document.querySelector(".history__load--js");
 
 function playSound(e) {
   audios.forEach((audio) => {
