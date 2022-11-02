@@ -11,6 +11,7 @@ const load = document.querySelector(".history__load--js");
 const reset = document.querySelector(".history__reset--js");
 const currentHeading = document.querySelector(".music__heading--js");
 const previousHeading = document.querySelector(".music__heading-second--js");
+const myInfo = document.querySelector(".music__info--js");
 
 function playSound(e) {
   audios.forEach((audio) => {
@@ -22,6 +23,7 @@ function playSound(e) {
 
   buttons.forEach((button) => {
     if (e.keyCode == button.name) {
+      myInfo.innerHTML=" ";
       button.classList.toggle("first__special");
       previousHeading.classList.remove('music__heading-second--open');
       currentHeading.classList.add('music__heading--open');
@@ -36,6 +38,7 @@ window.addEventListener("keydown", playSound);
 
 for (let button of buttons) {
   button.addEventListener("click", () => {
+    myInfo.innerHTML=" ";
     button.classList.toggle("first__special");
     for (let audio of audios) {
       if (audio.id == button.name) {
@@ -53,9 +56,13 @@ for (let button of buttons) {
 }
 
 load.addEventListener('click', () => {
+  currentHeading.classList.remove('music__heading--open');
   const myResult=localStorage.getItem('sound');
+  if(myResult){
   previousHeading.classList.add('music__heading-second--open');
-  history.innerHTML=JSON.parse(myResult);
+  history.innerHTML=JSON.parse(myResult);}else{
+    myInfo.innerHTML=`There are no previous sounds`;
+  }
 })
 
 reset.addEventListener('click', () => {
