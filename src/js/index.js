@@ -8,6 +8,9 @@ const buttons = document.querySelectorAll("button");
 const audios = document.querySelectorAll("audio");
 const history = document.querySelector(".music__history--js");
 const load = document.querySelector(".history__load--js");
+const reset = document.querySelector(".history__reset--js");
+const currentHeading = document.querySelector(".music__heading--js");
+const previousHeading = document.querySelector(".music__heading-second--js");
 
 function playSound(e) {
   audios.forEach((audio) => {
@@ -20,8 +23,11 @@ function playSound(e) {
   buttons.forEach((button) => {
     if (e.keyCode == button.name) {
       button.classList.toggle("first__special");
+      previousHeading.classList.remove('music__heading-second--open');
+      currentHeading.classList.add('music__heading--open');
       const myTempate = `<button class="first__button">${button.innerHTML}</button>`;
       history.innerHTML += myTempate;
+      localStorage.setItem('sound', JSON.stringify(history.innerHTML));
     }
   });
 }
@@ -37,6 +43,8 @@ for (let button of buttons) {
         audio.play();
       }
     }
+    previousHeading.classList.remove('music__heading-second--open');
+    currentHeading.classList.add('music__heading--open');
     const myTempate = `<button class="first__button">${button.innerHTML}</button>`;
     history.innerHTML += myTempate;
     localStorage.setItem('sound', JSON.stringify(history.innerHTML));
@@ -46,5 +54,16 @@ for (let button of buttons) {
 
 load.addEventListener('click', () => {
   const myResult=localStorage.getItem('sound');
+  previousHeading.classList.add('music__heading-second--open');
   history.innerHTML=JSON.parse(myResult);
+})
+
+reset.addEventListener('click', () => {
+  history.innerHTML=" ";
+  localStorage.removeItem('sound');
+  previousHeading.classList.remove('music__heading-second--open');
+  currentHeading.classList.remove('music__heading--open');
+  buttons.forEach(button => {
+    button.classList.remove("first__special");
+  })
 })

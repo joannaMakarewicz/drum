@@ -70,6 +70,19 @@ html {
 }
 
 .music {
+  &__heading {
+    display:none;
+    &--open {
+      display:block;
+    }
+  }
+  &__heading-second {
+    @extend.music__heading;
+    &--open {
+      display:block;
+    }
+  }
+
   &__history {
     max-height: 280px;
     overflow: hidden;
