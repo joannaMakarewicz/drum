@@ -16,6 +16,7 @@ html {
 .first {
   background-image: url("../assets/img/crowd.jpg");
   background-position: 35% 50%;
+  color:$firstColor;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   height: 100%;
@@ -41,7 +42,6 @@ html {
     margin-top:0;
   }
   &__heading {
-    color: $firstColor;
     margin-bottom: 0;
   }
   &__keys {
@@ -62,5 +62,11 @@ html {
     box-shadow: 0 0 1rem #970d1a;
     transform: scale(1.1);
     text-shadow: 0 0 0.5rem #4e204d;
+  }
+}
+
+@media screen and (max-width:500px){
+  .first__keys {
+margin:36px 36px;
   }
 }
