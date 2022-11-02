@@ -33,11 +33,16 @@ html {
     width: 80px;
     height: 80px;
     margin: 5px;
+    outline: none;
     padding: 6px;
     transform: scale(1);
   }
+  &__content {
+    margin-top:0;
+  }
   &__heading {
     color: $firstColor;
+    margin-bottom: 0;
   }
   &__keys {
     margin: 36px 0px;

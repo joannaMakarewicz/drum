@@ -6,6 +6,7 @@ console.log("HELLO. My name is Joanna. Nice to meet you on my website. Enjoy!");
 
 const buttons = document.querySelectorAll("button");
 const audios = document.querySelectorAll("audio");
+const history = document.querySelector('.music__history');
 
 function playSound(e) {
   audios.forEach(audio => {
@@ -18,6 +19,8 @@ function playSound(e) {
   buttons.forEach(button => {
     if (e.keyCode == button.name) {
       button.classList.toggle("first__special");
+    //   const myTempate = `<button class="first__button">${button.name}<br /><span class="first__sound">hihat</span></button>`
+    // history.innerHTML+=myTempate;
     }
   });
 }
@@ -32,6 +35,7 @@ for (let button of buttons) {
         audio.currentTime = 0;
         audio.play();
       }
-    }
-  });
-}
+    };
+    // const myTempate = `<button class="first__button">${button.name}<br /><span class="first__sound">hihat</span></button>`
+    // history.innerHTML+=myTempate;
+  })}
