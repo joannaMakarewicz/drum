@@ -29,6 +29,7 @@ html {
     background: none;
     border: 2px solid $firstColor;
     border-radius: 6px;
+    color: $firstColor;
     font-size: larger;
     font-weight: bold;
     width: 80px;
@@ -46,6 +47,9 @@ html {
   }
   &__keys {
     margin: 36px 0px;
+    @media screen and (max-width:500px){
+      margin:36px 36px;
+    }
   }
   &__section {
     margin-top:150px;
@@ -65,8 +69,4 @@ html {
   }
 }
 
-@media screen and (max-width:500px){
-  .first__keys {
-margin:36px 36px;
-  }
-}
+
