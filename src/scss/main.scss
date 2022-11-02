@@ -69,4 +69,9 @@ html {
   }
 }
 
-
+.music {
+  &__history {
+    max-height: 180px;
+    overflow:hidden;
+  }
+}
