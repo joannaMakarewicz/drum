@@ -27,7 +27,7 @@ function playSound(e) {
       button.classList.toggle("first__special");
       previousHeading.classList.remove('music__heading-second--open');
       currentHeading.classList.add('music__heading--open');
-      const myTempate = `<button class="first__button">${button.innerHTML}</button>`;
+      const myTempate = `<button class="first__button-history">${button.innerHTML}</button>`;
       history.innerHTML += myTempate;
       localStorage.setItem('sound', JSON.stringify(history.innerHTML));
     }
@@ -48,7 +48,7 @@ for (let button of buttons) {
     }
     previousHeading.classList.remove('music__heading-second--open');
     currentHeading.classList.add('music__heading--open');
-    const myTempate = `<button class="first__button">${button.innerHTML}</button>`;
+    const myTempate = `<button class="first__button-history">${button.innerHTML}</button>`;
     history.innerHTML += myTempate;
     localStorage.setItem('sound', JSON.stringify(history.innerHTML));
 
