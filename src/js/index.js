@@ -1,7 +1,5 @@
 import "../scss/main.scss";
 
-/* place your code below */
-
 console.log("HELLO. My name is Joanna. Nice to meet you on my website. Enjoy!");
 
 const buttons = document.querySelectorAll("button");
@@ -12,6 +10,8 @@ const reset = document.querySelector(".history__reset--js");
 const currentHeading = document.querySelector(".music__heading--js");
 const previousHeading = document.querySelector(".music__heading-second--js");
 const myInfo = document.querySelector(".music__info--js");
+
+//function for keyboard//
 
 function playSound(e) {
   audios.forEach((audio) => {
@@ -36,6 +36,8 @@ function playSound(e) {
 
 window.addEventListener("keydown", playSound);
 
+//function for buttons//
+
 for (let button of buttons) {
   button.addEventListener("click", () => {
     myInfo.innerHTML=" ";
@@ -51,9 +53,9 @@ for (let button of buttons) {
     const myTempate = `<button class="first__button-history">${button.innerHTML}</button>`;
     history.innerHTML += myTempate;
     localStorage.setItem('sound', JSON.stringify(history.innerHTML));
-
   });
 }
+//load history//
 
 load.addEventListener('click', () => {
   currentHeading.classList.remove('music__heading--open');
@@ -64,6 +66,8 @@ load.addEventListener('click', () => {
     myInfo.innerHTML=`There are no previous sounds`;
   }
 })
+
+//reset history//
 
 reset.addEventListener('click', () => {
   history.innerHTML=" ";
