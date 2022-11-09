@@ -69,12 +69,12 @@ load.addEventListener('click', () => {
 
 //reset history//
 
-reset.addEventListener('click', () => {
-  history.innerHTML=" ";
-  localStorage.removeItem('sound');
-  previousHeading.classList.remove('music__heading-second--open');
-  currentHeading.classList.remove('music__heading--open');
-  buttons.forEach(button => {
-    button.classList.remove("first__special");
-  })
-})
+// reset.addEventListener('click', () => {
+//   history.innerHTML=" ";
+//   localStorage.removeItem('sound');
+//   previousHeading.classList.remove('music__heading-second--open');
+//   currentHeading.classList.remove('music__heading--open');
+//   buttons.forEach(button => {
+//     button.classList.remove("first__special");
+//   })
+// })

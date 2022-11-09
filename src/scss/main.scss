@@ -73,7 +73,7 @@ html {
     border: 2px solid #970d1a;
     box-shadow: 0 0 1rem #970d1a;
     transform: scale(1.1);
-    text-shadow: 0 0 0.5rem #4e204d;
+    text-shadow: 0 0 2px #4e204d;
   }
 }
 
@@ -94,8 +94,8 @@ html {
   &__history {
     max-height: 240px;
     overflow: hidden;
-    @media screen and (max-width: 500px) {
-      margin: 36px 36px;
+    @media screen and (min-width: 500px) {
+      margin: 36px 136px;
     }
   }
 }
