@@ -57,24 +57,24 @@ for (let button of buttons) {
 }
 //load history//
 
-load.addEventListener('click', () => {
-  currentHeading.classList.remove('music__heading--open');
-  const myResult=localStorage.getItem('sound');
-  if(myResult){
-  previousHeading.classList.add('music__heading-second--open');
-  history.innerHTML=JSON.parse(myResult);}else{
-    myInfo.innerHTML=`There are no previous sounds`;
-  }
-})
+// load.addEventListener('click', () => {
+//   currentHeading.classList.remove('music__heading--open');
+//   const myResult=localStorage.getItem('sound');
+//   if(myResult){
+//   previousHeading.classList.add('music__heading-second--open');
+//   history.innerHTML=JSON.parse(myResult);}else{
+//     myInfo.innerHTML=`There are no previous sounds`;
+//   }
+// })
 
 //reset history//
 
-// reset.addEventListener('click', () => {
-//   history.innerHTML=" ";
-//   localStorage.removeItem('sound');
-//   previousHeading.classList.remove('music__heading-second--open');
-//   currentHeading.classList.remove('music__heading--open');
-//   buttons.forEach(button => {
-//     button.classList.remove("first__special");
-//   })
-// })
+reset.addEventListener('click', () => {
+  history.innerHTML=" ";
+  localStorage.removeItem('sound');
+  previousHeading.classList.remove('music__heading-second--open');
+  currentHeading.classList.remove('music__heading--open');
+  buttons.forEach(button => {
+    button.classList.remove("first__special");
+  })
+})
