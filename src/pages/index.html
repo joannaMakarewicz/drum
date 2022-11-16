@@ -6,51 +6,76 @@
     <title>Let's play drum</title>
     <meta name="description" content="Basic drum keys with sound" />
     <meta property="og:title" content="Drum" />
-    <meta property="og:url" content="https://joannamakarewicz.github.io/drum/" />
+    <meta
+      property="og:url"
+      content="https://joannamakarewicz.github.io/drum/"
+    />
     <meta
       property="og:image"
       content="https://joannamakarewicz.github.io/drum/drum.png"
     />
+  </head>
+  <body class="first">
+    <main>
+      <header class="history">
+        <div class="history__load history__load--js">Load previous sounds</div>
+        <div class="history__reset history__reset--js">Reset sounds</div>
+      </header>
 
-    <body class="first">  </head>
-
-  <main>  
-    <header class="history">
-      <div class="history__load history__load--js">Load previous sounds</div>
-      <div class="history__reset history__reset--js">Reset sounds</div>
-    </header>
-
-    <section class="first__section">
+      <section class="first__section">
         <h1 class="first__heading">Press the button</h1>
         <p class="first__content">or select letters on the keyboard</p>
         <div class="first__keys">
-        <button class="first__button first__button--65" name="65">A<br /><span class="first__sound">clap</span></button>
-        <button class="first__button" name="83">S<br /><span class="first__sound">hihat</span></button>
-        <button class="first__button" name="68">D<br /><span class="first__sound">kick</span></button>
-        <button class="first__button" name="70">F<br /><span class="first__sound">openhat</span></button>
-        <button class="first__button" name="71">G<br /><span class="first__sound">boom</span></button>
-        <button class="first__button" name="72">H<br /><span class="first__sound">ride</span></button>
-        <button class="first__button" name="74">J<br /><span class="first__sound">snare</span></button>
-        <button class="first__button" name="75">K<br /><span class="first__sound">tom</span></button>
-        <button class="first__button" name="76">L<br /><span class="first__sound">tink</span></button>
-      </div>
-        <audio class="first__clap first__clap--65" id="65" src="./clap.mp3"></audio>
+          <button class="first__button first__button--65" name="65">
+            A<br /><span class="first__sound">clap</span>
+          </button>
+          <button class="first__button" name="83">
+            S<br /><span class="first__sound">hihat</span>
+          </button>
+          <button class="first__button" name="68">
+            D<br /><span class="first__sound">kick</span>
+          </button>
+          <button class="first__button" name="70">
+            F<br /><span class="first__sound">openhat</span>
+          </button>
+          <button class="first__button" name="71">
+            G<br /><span class="first__sound">boom</span>
+          </button>
+          <button class="first__button" name="72">
+            H<br /><span class="first__sound">ride</span>
+          </button>
+          <button class="first__button" name="74">
+            J<br /><span class="first__sound">snare</span>
+          </button>
+          <button class="first__button" name="75">
+            K<br /><span class="first__sound">tom</span>
+          </button>
+          <button class="first__button" name="76">
+            L<br /><span class="first__sound">tink</span>
+          </button>
+        </div>
+        <audio
+          class="first__clap first__clap--65"
+          id="65"
+          src="./clap.mp3"
+        ></audio>
         <audio class="first__clap" id="83" src="./hihat.mp3"></audio>
         <audio class="first__clap" id="68" src="./kick.mp3"></audio>
         <audio class="first__clap" id="70" src="./openhat.mp3"></audio>
-        <audio class="first__clap" id="71" src="./boom.mp3" ></audio>
-        <audio class="first__clap" id="72" src="./ride.mp3" ></audio>
+        <audio class="first__clap" id="71" src="./boom.mp3"></audio>
+        <audio class="first__clap" id="72" src="./ride.mp3"></audio>
         <audio class="first__clap" id="74" src="./snare.mp3"></audio>
         <audio class="first__clap" id="75" src="./tom.mp3"></audio>
         <audio class="first__clap" id="76" src="./tink.mp3"></audio>
-
       </section>
       <section class="music">
         <h2 class="music__heading music__heading--js">Your current sounds</h2>
-        <h3 class="music__heading-second music__heading-second--js">Your previous sounds</h3>
+        <h3 class="music__heading-second music__heading-second--js">
+          Your previous sounds
+        </h3>
         <p class="music__info music__info--js"></p>
         <div class="music__history music__history--js"></div>
       </section>
     </main>
-    </body>
+  </body>
 </html>
