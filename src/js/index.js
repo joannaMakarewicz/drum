@@ -55,19 +55,19 @@ for (let button of buttons) {
     localStorage.setItem('sound', JSON.stringify(history.innerHTML));
   });
 }
-//load history//
+// load history//
 
-// load.addEventListener('click', () => {
-//   currentHeading.classList.remove('music__heading--open');
-//   const myResult=localStorage.getItem('sound');
-//   if(myResult){
-//   previousHeading.classList.add('music__heading-second--open');
-//   history.innerHTML=JSON.parse(myResult);}else{
-//     myInfo.innerHTML=`There are no previous sounds`;
-//   }
-// })
+load.addEventListener('click', () => {
+  currentHeading.classList.remove('music__heading--open');
+  const myResult=localStorage.getItem('sound');
+  if(myResult){
+  previousHeading.classList.add('music__heading-second--open');
+  history.innerHTML=JSON.parse(myResult);}else{
+    myInfo.innerHTML=`There are no previous sounds`;
+  }
+})
 
-//reset history//
+// reset history//
 
 reset.addEventListener('click', () => {
   history.innerHTML=" ";
