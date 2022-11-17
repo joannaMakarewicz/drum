@@ -2,7 +2,7 @@
 
 # Let's play drum
 
-Simple tool for drum player - main sounds of drum put into buttons.
+Simple tool for drum player - main sounds of drum put into buttons and keys on keyboard.
 
 # Description
 
